@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="external-repo" />
+      <option name="name" value="external-repo" />
+      <option name="url" value="https://eu-central-1.artifactory.wexapps.com/artifactory/external-public-repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="private-internal-plugins-repo" />
+      <option name="name" value="private-internal-plugins-repo" />
+      <option name="url" value="https://eu-central-1.artifactory.wexapps.com/artifactory/private-internal-plugins" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="external-repo" />
+      <option name="url" value="https://eu-central-1.artifactory.wexapps.com/artifactory/external-public-repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="private-internal-repo" />
+      <option name="name" value="private-internal-repo" />
+      <option name="url" value="https://eu-central-1.artifactory.wexapps.com/artifactory/private-internal-repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="thirty-part-repo" />
+      <option name="name" value="thirty-part-repo" />
+      <option name="url" value="https://eu-central-1.artifactory.wexapps.com/artifactory/third-party" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="private-internal-snapshots-repo" />
+      <option name="name" value="private-internal-snapshots-repo" />
+      <option name="url" value="https://eu-central-1.artifactory.wexapps.com/artifactory/private-internal-snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="private-internal-releases-repo" />
+      <option name="name" value="private-internal-releases-repo" />
+      <option name="url" value="https://eu-central-1.artifactory.wexapps.com/artifactory/private-internal-releases" />
+    </remote-repository>
+  </component>
+</project>
