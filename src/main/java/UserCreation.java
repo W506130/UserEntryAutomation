@@ -37,8 +37,8 @@ public class UserCreation {
     public JsonPath jsonPathEvaluator;
     public Scenario logger;
 
-    private Properties loadConfigProperties(String environment) {
-        CONFIG_PROPERTY_FILE_BASE_PATH = System.getProperty("property.folder.path", "../");
+    private Properties loadConfigProperties() {
+        CONFIG_PROPERTY_FILE_BASE_PATH = System.getProperty("property.folder.path", "..");
         System.out.println(CONFIG_PROPERTY_FILE_BASE_PATH);
         String configFIlePath = CONFIG_PROPERTY_FILE_BASE_PATH + "/user-creation-" + "prop" + ".properties";
         Properties configProperties = PropUtils.getProps(new File(configFIlePath));
@@ -150,8 +150,8 @@ public class UserCreation {
     public void createUsers(Properties configProperties, Map<String, String> midMap, Map<String, String> roleMap, Map<String, String> clientMidMap) throws UserCreationException {
         RestAssured.baseURI = configProperties.getProperty("serviceBaseURL");
         System.out.println("RestAssured.baseURI  " + RestAssured.baseURI);
-        File file = new File(configProperties.getProperty("inputFileName"));
-        File outputfile = new File("Result_" + System.currentTimeMillis() + "_" + configProperties.getProperty("inputFileName"));
+        File file = new File("../"+configProperties.getProperty("inputFileName"));
+        File outputfile = new File("../"+"Result_" + System.currentTimeMillis() + "_" + configProperties.getProperty("inputFileName"));
         try {
             FileInputStream inputStream = new FileInputStream(file);
             FileInputStream inputStream2 = new FileInputStream(file);
@@ -318,7 +318,7 @@ public class UserCreation {
     public static void main(String args[]) {
         try {
             UserCreation userCreation = new UserCreation();
-            Properties configProperties = userCreation.loadConfigProperties(args.length > 0 ? args[1] : null);
+            Properties configProperties = userCreation.loadConfigProperties();
             try {
                 Map<String, String> clientMidMap = userCreation.getCountryLevelClientMids(configProperties);
                 Map<String, String> roleMap = userCreation.getRoleOidByRoleDescription(configProperties);
